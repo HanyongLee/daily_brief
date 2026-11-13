@@ -4,6 +4,7 @@
   구글 웹앱 화면을 이 페이지 안에 화면 가득 띄운다. 다른 사이트 틀 안에서는 구글 안내 띠가 나오지 않는다.
   웹앱은 ?embed=1 로 열 때만 틀을 허용한다(apps-script/v2/web_Code.gs). 이 파일에는 인증키·개인정보를 넣지 않는다.
   넘기는 주소 값: d=YYYY-MM-DD(지난 브리프 보기)만.
+  공개 저장소에는 이 파일과 og.png(링크 미리보기 이미지) 두 개만 올린다.
 -->
 <html lang="ko">
 <head>
@@ -11,6 +12,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>공판 데일리 브리프</title>
+<!-- 링크 미리보기(카카오톡·메신저, 2026-11-14): 대표 이미지 og.png(scripts/make_og.mjs로 만듦)와 설명 한 줄. 이미지 주소는 절대 주소여야 한다 -->
+<meta name="description" content="매일 아침 7시, 공판사업 핵심 뉴스와 공판장 실적을 한 화면에">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="공판 데일리 브리프">
+<meta property="og:title" content="공판 데일리 브리프">
+<meta property="og:description" content="매일 아침 7시, 공판사업 핵심 뉴스와 공판장 실적을 한 화면에">
+<meta property="og:url" content="https://hanyonglee.github.io/daily_brief/">
+<meta property="og:image" content="https://hanyonglee.github.io/daily_brief/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="공판 데일리 브리프 — 매일 아침 7시 공판사업 뉴스·실적">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23005EB8'/%3E%3Ctext x='32' y='44' font-size='34' text-anchor='middle' fill='%23ffffff' font-family='sans-serif'%3E%EA%B3%B5%3C/text%3E%3C/svg%3E">
 <style>
   :root{--bg:#f3f5f8;--ink:#2b3440;--sub:#5c6a78;--link:#005eb8}
