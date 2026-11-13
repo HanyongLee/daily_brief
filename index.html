@@ -1,0 +1,40 @@
+<!doctype html>
+<!--
+  공판 데일리 브리프 — 공개 틀 페이지(GitHub Pages용, 2026-11-14)
+  구글 웹앱 화면을 이 페이지 안에 화면 가득 띄운다. 다른 사이트 틀 안에서는 구글 안내 띠가 나오지 않는다.
+  웹앱은 ?embed=1 로 열 때만 틀을 허용한다(apps-script/v2/web_Code.gs). 이 파일에는 인증키·개인정보를 넣지 않는다.
+  넘기는 주소 값: d=YYYY-MM-DD(지난 브리프 보기)만.
+-->
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>공판 데일리 브리프</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23005EB8'/%3E%3Ctext x='32' y='44' font-size='34' text-anchor='middle' fill='%23ffffff' font-family='sans-serif'%3E%EA%B3%B5%3C/text%3E%3C/svg%3E">
+<style>
+  :root{--bg:#f3f5f8;--ink:#2b3440;--sub:#5c6a78;--link:#005eb8}
+  @media (prefers-color-scheme: dark){:root{--bg:#14181d;--ink:#e6e9ee;--sub:#a3adb8;--link:#7ab8ff}}
+  html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);
+    font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI","Malgun Gothic","Apple SD Gothic Neo",sans-serif}
+  /* 불러오는 동안만 보이는 안내(틀이 그려지면 가려진다) */
+  #wait{position:fixed;top:0;right:0;bottom:0;left:0;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center}
+  #wait p{margin:0}
+  #wait small{display:block;margin-top:6px;color:var(--sub)}
+  #wait a{color:var(--link)}
+  #app{position:fixed;top:0;right:0;bottom:0;left:0;width:100%;height:100%;border:0;display:block;background:transparent}
+</style>
+</head>
+<body>
+<div id="wait"><p>공판 데일리 브리프를 불러오는 중입니다.<small>화면이 열리지 않으면 <a id="direct" href="https://script.google.com/macros/s/AKfycbyx9RljH0gXKMzG7igH_j0bZRQKnLdyWuKmCDbo0Riyq_7eqqs9CihW-cgVTGPijd41/exec">구글 주소로 바로 열기</a></small></p></div>
+<iframe id="app" title="공판 데일리 브리프" allow="clipboard-write"></iframe>
+<script>
+(function () {
+  var EXEC = "https://script.google.com/macros/s/AKfycbyx9RljH0gXKMzG7igH_j0bZRQKnLdyWuKmCDbo0Riyq_7eqqs9CihW-cgVTGPijd41/exec";
+  var m = /[?&]d=(\d{4}-\d{2}-\d{2})(?:&|$)/.exec(location.search), d = m ? m[1] : "";
+  document.getElementById("app").src = EXEC + "?" + (d ? "d=" + d + "&" : "") + "embed=1";
+  document.getElementById("direct").href = EXEC + (d ? "?d=" + d : "");
+})();
+</script>
+</body>
+</html>
