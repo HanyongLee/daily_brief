@@ -4,7 +4,7 @@
   구글 웹앱 화면을 이 페이지 안에 화면 가득 띄운다. 다른 사이트 틀 안에서는 구글 안내 띠가 나오지 않는다.
   웹앱은 ?embed=1 로 열 때만 틀을 허용한다(apps-script/v2/web_Code.gs). 이 파일에는 인증키·개인정보를 넣지 않는다.
   넘기는 주소 값: d=YYYY-MM-DD(지난 브리프 보기)만.
-  공개 저장소에는 이 파일과 og.png(링크 미리보기 이미지), favicon-nh-v1.ico(탭 아이콘) 세 개만 올린다.
+  공개 저장소에는 index.html·og-v2.png(링크 미리보기 이미지)·favicon-nh-v1.ico(탭 아이콘)만 올린다(옛 og.png는 이미 보낸 미리보기라 남겨 둠).
 -->
 <html lang="ko">
 <head>
@@ -12,18 +12,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>공판 데일리 브리프</title>
-<!-- 링크 미리보기(카카오톡·메신저, 2026-11-14): 대표 이미지 og.png(scripts/make_og.mjs로 만듦)와 설명 한 줄. 이미지 주소는 절대 주소여야 한다 -->
-<meta name="description" content="매일 아침 7시, 공판사업 핵심 뉴스와 공판장 실적을 한 화면에">
+<!-- 링크 미리보기(카카오톡·메신저, 2026-11-14 → 2026-11-16 2판): 대표 이미지 og-v2.png(scripts/make_og.mjs로 만듦)와 설명 한 줄. 이미지 주소는 절대 주소여야 한다.
+     7시 30분 = 임직원 안내 시각(오늘 브리프는 07:08~07:14에 들어옴). 주간(월)·월간(2일)은 07:30에 작업을 시작해 요일만 적는다 -->
+<meta name="description" content="매일 아침 7시 30분, 공판사업 뉴스·실적과 주간·월간 흐름">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="공판 데일리 브리프">
 <meta property="og:title" content="공판 데일리 브리프">
-<meta property="og:description" content="매일 아침 7시, 공판사업 핵심 뉴스와 공판장 실적을 한 화면에">
+<meta property="og:description" content="매일 아침 7시 30분, 공판사업 뉴스·실적과 주간·월간 흐름">
 <meta property="og:url" content="https://hanyonglee.github.io/daily_brief/">
-<meta property="og:image" content="https://hanyonglee.github.io/daily_brief/og.png">
+<meta property="og:image" content="https://hanyonglee.github.io/daily_brief/og-v2.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="공판 데일리 브리프 — 매일 아침 7시 공판사업 뉴스·실적">
+<meta property="og:image:alt" content="공판 데일리 브리프 — 오늘 브리프 매일 아침 7시 30분, 주간 브리프 매주 월요일, 월간 브리프 매월 2일">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="favicon-nh-v1.ico">
 <style>
